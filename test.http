@@ -1,0 +1,23 @@
+### Create Todo
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+  "title": "Buy groceries1",
+  "done": false,
+  "userId": 1
+}
+
+### Get All Todos
+GET http://localhost:3000/todos?userId=1
+
+### Update Todo
+PATCH  http://localhost:3000/todos/1
+Content-Type: application/json
+
+{
+  "done": true
+}
+
+### Delete Todo
+DELETE http://localhost:3000/todos/1
