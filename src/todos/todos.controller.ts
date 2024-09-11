@@ -6,7 +6,6 @@ import {
   Patch,
   Param,
   Delete,
-  Query,
 } from '@nestjs/common';
 import { TodosService } from './todos.service';
 import { CreateTodoDto } from './dto/create-todo.dto';
@@ -22,9 +21,8 @@ export class TodosController {
   }
 
   @Get()
-  findAll(@Query('userId') userId: number) {
-    console.log('userId', userId);
-    return this.todosService.findAll(userId);
+  findAll() {
+    return this.todosService.findAll();
   }
 
   @Patch(':id')

@@ -10,7 +10,4 @@ export class Todo {
 
   @Column()
   done: boolean;
-
-  @Column()
-  userId: number;
 }

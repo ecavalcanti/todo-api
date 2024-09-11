@@ -16,12 +16,8 @@ export class TodosService {
     return this.todoRepository.save(createTodoDto);
   }
 
-  findAll(userId: number) {
-    return this.todoRepository.find({
-      where: {
-        userId,
-      },
-    });
+  findAll() {
+    return this.todoRepository.find();
   }
 
   update(id: number, updateTodoDto: UpdateTodoDto) {

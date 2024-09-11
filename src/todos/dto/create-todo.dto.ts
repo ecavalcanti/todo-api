@@ -1,4 +1,4 @@
-import { IsBoolean, IsInt, IsString } from 'class-validator';
+import { IsBoolean, IsString } from 'class-validator';
 
 export class CreateTodoDto {
   @IsString()
@@ -6,7 +6,4 @@ export class CreateTodoDto {
 
   @IsBoolean()
   done: boolean;
-
-  @IsInt()
-  userId: number;
 }
